@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  },
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "un curso de nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "desarrollo": "node index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "curso",
+    "español"
+  ],
+  "author": "Camilo",
+  "license": "ISC"
+}

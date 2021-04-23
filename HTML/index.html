@@ -1,0 +1,37 @@
+ <html>
+
+<head>
+  <title>Miracle</title>
+<script src="js/juego.js" ></script>
+<script src="js/Keypress.js" ></script>
+</head>
+
+
+
+ <body>
+   <button onclick="ataqueEnemigo(10, 'Ataque básico');">Ataque1</button>
+   <button onclick="ataqueEnemigo(30, 'Ataque mejorado');">Ataque2</button>
+   <button onclick="ataqueEnemigo(60, 'Ataque fuerte');">Ataque3</button>
+    <button onclick="accion();">Accion</button>
+    <button onclick="adivinarNumero();">Adivinar Numero</button>
+    <br><br><br>
+   <button onclick= "juegaTurno();" >Jugar Turno </button>
+   <br><br><br>
+   <button onclick = "usarItem(0);" >Pocion</button>
+   <br>
+   <button onclick = "usarItem(1);">Cola de Fénix</button>
+   <br>
+   <button onclick = "usarItem(2);">Pocion quemaduras</button>
+   <br>
+   <button onclick = "usarItem(3);">Pocion Veneno</button>
+   <br><br><br>
+   Comprar <br>
+   <button onclick = "comprar('Pocion');">Pocion</button>
+   <button onclick = "comprar('Espada');">Espada</button>
+   <button onclick = "comprar('Escudo');">Escudo</button>
+   <button onclick = "comprar('Arco');">Arco</button>
+   <br><br><br><br><br>
+   <button onclick = "crear10Enemigos(6);">Crear 10 Enemigos</button>
+</body>
+
+</html>

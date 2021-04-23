@@ -1,0 +1,186 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+}
+
+#inside {
+    background-color: white;
+    width: 80%;
+    margin: 0;
+
+}
+
+body{
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    width: 100%;
+    background-color: rgb(158, 155, 155);
+    border-top: 100px solid teal;
+    border-bottom: 100px transparent teal;
+    padding-bottom: 3%;
+    padding-left: 16%;  
+    font-family: 'Roboto';  
+
+}
+
+header
+{   
+    margin-bottom: 5px;
+    font-size: 2rem;
+    background-color:  rgb(194, 192, 192);
+    width: 100%;
+    letter-spacing: 0.2em;
+    word-spacing: 1rem;
+    line-height: 100%;
+    text-decoration: none;      
+    display: flex;
+    list-style-type: none;
+}
+header ul li {
+    list-style-type: none;
+}
+
+header ul li a{
+    position: relative;
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none   ;  
+    font-size: 2rem;
+    color:rgb(255, 255, 255);
+
+}
+
+
+#secundario {    
+    width: 20%;
+    float: left;
+    padding: 0.5em;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-indent: 2rem;
+    line-height: 3rem;
+}
+
+#principal {
+    width: 60%;
+    float: left;
+    padding: 0.5em;
+    border-radius: 5%;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: black;
+    text-indent: 3rem;
+    line-height: 4rem;
+    background-color: rgba(180, 173, 173, 0.507);
+}
+
+.container{
+    display: flex;
+    align-items: column;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: white;
+    text-indent: 3rem;
+    line-height: 4rem;
+    text-transform: lowercase;
+    width: 100%;
+    border-radius: 5%;
+    padding: 1em;
+}
+
+    
+.container ul{
+    background-color:rgba(180, 173, 173, 0.507);
+    width: 50%;
+    margin: 10px;
+    padding: 3rem;
+    border-radius: 5%;
+}
+.container ul li{
+    color: black;
+    margin: 5%;
+    font-size: 3rem;
+    display: flex;
+    border-radius: 1rem;
+    text-transform: capitalize;
+}
+
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+a:active {
+    font-weight: bold;
+    color: black;
+}
+
+#terciario {    
+    background-color: rgba(180, 173, 173, 0.507);
+    width: 20%;
+    float: left;
+    border-radius: 1rem;
+    padding: 0.5em;
+}
+
+#terciario progress {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+#footer {
+    background-color: rgb(194, 192, 192);
+    clear: both;
+    width: 100%;
+    padding: 1em;
+    height: 5em;
+
+}
+
+#todox2 {
+    margin: 10px;
+    background-color: white;
+    color: yellowgreen;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-style: italic;
+    border: 0px;
+    display: flex;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    #principal {
+        width: 70%;
+    }
+    #secundario {
+        width: 30%;
+    }
+    #terciario {
+        float: none;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    #principal, #secundario, #terciario {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+        font-size: 22px;
+    }
+}

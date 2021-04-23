@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        
+        img.disabled {
+            opacity: .3;
+        }
+       
+        picture {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 100px;
+        }
+        picture.is-small{
+            width: 50px;
+        }
+        picture.is-large{
+            width: 200px;
+        }
+
+    </style>
+      <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <h1>Womens in Tech</h1>
+    <div id="app"></div>
+    <script type="text/babel">
+        const $app = document.getElementById("app");
+        const useState = React.useState
+
+        const Avatar = ({id, name = "Name", size}) => {
+            const [enabled, setEnabled] = useState(true);
+         
+
+            const src = `https://randomuser.me/api/portraits/women/${id}.jpg`;
+            
+            let pictureClassName = "";
+            if (size === "small") {
+                pictureClassName = "is-small";
+            } else if (size === "large") {
+                pictureClassName = "is-large";
+            }
+            const imgClassName = enabled ? '' : 'disabled'    
+            
+            return ( 
+                <picture className={pictureClassName}> 
+                    {
+                        id ? (
+                            <img onClick={() => setEnabled(!enabled)} className={imgClassName} src={src} />
+                    ) : (
+                        <img onClick={() => setEnabled(!enabled)} className={imgClassName} src="https://www.pngkey.com/png/full/176-1765817_business-woman-member-icon-female.png" />
+                    )}
+                 
+                    <strong>{enabled? name : ""}</strong>
+                </picture>
+                 );
+        };
+        
+        ReactDOM.render(
+            <div>
+                <Avatar  name="Roberta"/>
+                <Avatar id={2} />
+                <Avatar id={3} name="Mirta"/>
+                <Avatar id={4} name="Monica" size="small"/>
+                <Avatar id={5} name="Señora" size="small"/>
+                <Avatar id={61} name="Ruperta" size="large"/>
+
+            </div>,
+            $app
+        );
+    </script>
+</body>
+</html>
