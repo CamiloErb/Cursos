@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import uniqid from "uniqid"
 
+
 const Listado = () =>{
 
     const [nombre, setNombre] = useState("")
@@ -46,8 +47,8 @@ const Listado = () =>{
 
     return (
         <div>
-            <div className="row m-3">
-                <div className="col"><h2>Listado de nombres</h2>
+            <div className="row m-10">
+                <div className="col m-10"><h2>Listado de nombres</h2>
                     <ul className="list-group">
                         { 
                             listaNombres.map(item =>
