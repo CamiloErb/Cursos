@@ -1,0 +1,160 @@
+
+/* selector universal, selecciona todo */
+/* * {
+	background-color: lightcoral;
+} */
+
+/* selector de etiqueta */
+
+p{
+	background-color: lightcyan;
+}
+
+/* selectores de atributo */
+
+/* selector de id */
+
+#title{
+    background-color: lightgreen;
+}
+
+/* selector de clase/ mas recomendado */
+/* no hay limite de numero de clases de un elemento */
+
+.title{
+    background-color: lightsalmon;
+}
+/* .text{
+    background-color: limegreen;
+} */
+
+/* otros atributos  */
+/* si no van en este orden no funciona ya que el href general sobreescribe en la cascada */
+[href]{
+    background-color: green;
+}
+/* se fija en los valores que tengan ese nombre */
+[href="https://google.com"]{
+    background-color: pink;
+}
+/* se fija en los valores que empiecen con ese nombre */
+[href^="https://facebook"]{
+    background-color: red;
+}
+/* selecciona la palabra que coincida idependientemente donde este */
+[href*="twitter"]{
+    background-color: blue;
+}
+/* selecciona si termina con la palabra */
+[href$="m.com"]{
+    background-color: purple;
+}
+/* selecciona el valor es y si esta es- tambien en caso de agregar español de latam o españa etc */
+[lang|="es"] {
+    background-color: yellow;
+}
+
+/* selectores compuestos */
+
+
+/* selectores agrupados | podemos dar los mismos estilos a elementos con clase distinta*/
+
+.text-1,.text-2,.text-3 {
+    background-color: steelblue;
+}
+
+/* selectores combinadores*/
+
+/* selectores descendientes, podemos dar estilo a un elemento dentro de otro, por ej un h2 adentro de un div */
+div .subtitle-1{
+    background-color: teal;
+}
+/* selector de hermano siguiente, solo el hermano que este inmediatamente despues */
+.text-1 + .subtitle-2 {
+    background-color: tomato;
+}
+/* selector de hermanos siguientes, todos los hermanos siguientes p */
+.text-1 ~ p{
+    background-color: teal;
+}
+/* selector de hijo directo, cambia el estilo de los hijos directos de la clase elegida, si hay un div dentro no cambiara lo de adentro */
+.container > p {
+    background-color: tomato;
+}
+
+/* especificidad */
+/* escpecificidad 001*/
+h1 {
+
+}
+/* escpecificidad 010 */
+
+.title{
+
+}
+/* escpecificidad 100 */
+
+#title{
+
+}
+/* escpecificidad 011*/
+
+h1.title{
+
+}
+/* escpecificidad 101 */
+
+h1#title{
+
+}
+/* escpecificidad 111, la suma de las especificidades da este numero, por eso queda este como el ganador*/
+
+h1.title#title{
+
+}
+
+/* HERENCIA  capacidad de elementos de heredar algunas propiedades de los elementos que lo contienen (padres, abuelos, etc)*/
+/* .title es un h1 que dentro tiene un span con texto, este hereda el color de su padre el h1
+ el color se hereda, algunas cosas se heredan otras no, colores y fuentes mayormente se heredan*/
+ .title{
+    color: cyan;
+}
+/* los enlaces <a> no heredan de su padre */
+/* para trabajar con la herencia se usa la palabra clave inherit */
+/* .link es la clase de un enlace <a> y para que su color cambie cuando se cambia el de .text-1(su padre) se usa inherit */
+.text-1{
+    color:white;
+}
+.link{
+    color:inherit;
+    background-color: inherit;
+}
+/* inherit sirve para cualqueir propiedad que no se herede pero queremos forzar la herencia */
+/* podemos forzar que no se herede tambien de su padre */
+.list{
+    color:red;
+}
+.list-item-extra {
+    color: initial
+}
+/* con initial podemos hacer que vuelva a el estado initial y todo lo que herede de esa propiedad lo olvide */
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+/* el height y width funciona en elementos de bloque */
+/* el margin auto se puede usar solo en bloques con width definido */
+.block{
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* los elementos inline no tienen medida, no pueden cambiar el height y width. el tamaño lo determina su contenido, el margin funciona solo a los lados */
+.inline{
+    color: inherit;
+    background-color: lightcoral;
+    margin-left: 100px;
+}
