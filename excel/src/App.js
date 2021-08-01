@@ -1,7 +1,7 @@
 import { NavBar } from "./components/NavBar/NavBar"
 import {BrowserRouter, Route, Switch} from "react-router-dom"
-import { Inicio } from "./components/Inicio/Inicio";
-import { Profesionales } from "./components/Profesionales/Profesionales";
+import { Inicio } from "./pages/Inicio/Inicio";
+import { Profesionales } from "./pages/Profesionales/Profesionales";
 
 function App() {
   return (
